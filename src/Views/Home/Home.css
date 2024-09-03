@@ -7,7 +7,8 @@
 .App-description{
     font-size: 20px;
     font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-     color: rgb(54, 48, 48);
+    color: rgb(54, 48, 48);
+    margin: 30px;
 }
 .App-description-highlight{
     font-weight:400;
@@ -27,4 +28,22 @@
     font-size: 18px;
     font-weight: 690;
     cursor: pointer;
+}
+.shield-img{
+       height: 50px;
+       display: block;
+       margin: auto;
+
+}
+.feature-card{
+    background-color: white;
+    width: 240px;
+    padding: 20px;
+    box-shadow:0 0 10px  #5c5c60;
+    border-radius: 10px;
+    margin: 20px;
+}
+.cards-container{
+    display: flex;
+    justify-content: center;
 }
