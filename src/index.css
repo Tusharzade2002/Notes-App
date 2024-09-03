@@ -1,0 +1,38 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color:#C9CCD5 ;
+    
+}
+.text-centre{
+    text-align: center;
+}
+.primary-color{
+    color: #5fa8d3;
+}
+.secondary-color{
+    color: #C9CCD5;
+}
+.tarsary-color{
+    color: #E4D8DC;
+}
+.fourth-color{
+    color:#FFE3E3;
+}
+.primary-btn{
+    background-color: #90bcd5;
+    color: white;
+    &:hover{
+        transition: 0.8s;
+          background-color: #3c7596;
+    }
+}
+.secondary-btn{
+    background-color: #FFE3E3;
+    color: black;
+    &:hover{
+              transition: 0.8s;
+              background-color: #e9baba;
+    }
+}
