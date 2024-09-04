@@ -36,16 +36,78 @@
 
 }
 .feature-card{
- background-color: white;
+
  width: 240px;
  padding: 20px;
  box-shadow:0 0 10px  #5c5c60;
  border-radius: 10px;
  margin: 20px;
  background-color: #7aabc8;
+ flex-wrap: wrap;
+
+ &:hover{
+    transition: 0.7s;
+    box-shadow:0 0 10px  #333335;
+    background-color: #5a8094;
+ }
 }
 .cards-container{
  display: flex;
  justify-content: center;
+  
+}
+
+@media screen and (max-width:500px){
+    .feature-card{
+        background-color: white;
+        width: 200px;
+        padding: 20px;
+        box-shadow:0 0 10px  #5c5c60;
+        border-radius: 10px;
+        margin: 20px;
+        background-color: #7aabc8;
+        flex-wrap: wrap;
+       }
+       .cards-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+       }
+       .App-name{
+        font-size:35px;
+        font-weight: 600;
+       }
+       .App-description{
+        font-size: 13px;
+        font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        color: rgb(54, 48, 48);
+        margin: 20px 40px;
+        
+    }
+    .tagline-highlight{
+        display: inline-block;
+        margin: 5px 40px;
+    }
+    .text-hightlight{
+        font-size: 15px;
+        margin: 5px 40px;
+    }
+    .btn{
+        margin: 20px ;
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    .buttons-container{
+        position: fixed;
+        bottom: -1px;
+        background-color:  #C9CCD5;;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 2px 6px;
+        
+    }
 
 }

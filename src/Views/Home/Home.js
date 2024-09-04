@@ -4,6 +4,7 @@ import './../../index.css'
 import shield from './shield.png';
 import brain from './brain.png';
 import heart from './heart.png'
+import { Link } from 'react-router-dom';
 import Featurecard from '../../Component/FeatureCard/Featurecard';
 
 function Home() {
@@ -23,12 +24,12 @@ function Home() {
   ]
   return (
     <div>
-      <div className='text-centre App-name'> 📒{" "}Quick Notes</div>
+      <div className='text-centre App-name'> 📒Quick Notes</div>
       <p className='text-centre App-description'>
         Your Packet Friendly Notes Taking App. <del>Never Forget Anything Again!</del> 
-        <span className='highlight'> Remember Everything! 🧠</span>
+        <span className='highlight tagline-highlight'> Remember Everything! 🧠</span>
       </p>
-      <h2 className='text-centre'>Why You Should Use Quick Notes</h2>
+      <h2 className='text-centre text-hightlight' >Why You Should Use Quick Notes</h2>
       <div className='cards-container'>
       {
         FEATURE.map((feature)=>{
@@ -44,8 +45,13 @@ function Home() {
       </div>
 
       <div className='buttons-container'>
-        <button className='btn primary-btn'>Add Notes</button>
-        <button className='btn secondary-btn'>Show Notes</button>
+        <Link to="/add">
+        <button className='btn primary-btn'>✍️Add Notes</button>
+        </Link>
+
+        <Link to="/show">
+        <button className='btn secondary-btn'>📖Show Notes</button>
+        </Link>
       </div>
     </div>
   )

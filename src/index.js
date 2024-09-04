@@ -15,11 +15,11 @@ const router=createBrowserRouter([
     element:<Home />,
   },
   {
-    path:"/addnotes",
+    path:"/add",
     element:<Addnotes />,
   },
   {
-    path:"/shownotes",
+    path:"/show",
     element:<Shownotes />,
   }
 ])

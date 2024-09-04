@@ -36,14 +36,24 @@
 
 }
 .feature-card{
- background-color: white;
+background-color: #7aabc8;
  width: 240px;
  padding: 20px;
  box-shadow:0 0 10px  #5c5c60;
  border-radius: 10px;
  margin: 20px;
+
 }
 .cards-container{
  display: flex;
  justify-content: center;
+}
+@media screen and (max-width:500px){
+     .feature-card{
+        margin-top: 30px;
+        padding: 10px;
+     }
+     .feature-text{
+        text-align: center;
+     }
 }
