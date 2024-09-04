@@ -21,18 +21,20 @@ body{
     color:#FFE3E3;
 }
 .primary-btn{
-    background-color: #90bcd5;
+    background-color: #e6afaf;
     color: white;
     &:hover{
         transition: 0.8s;
-          background-color: #3c7596;
+        background-color: #e9baba;
     }
 }
 .secondary-btn{
-    background-color: #FFE3E3;
+    
+    background-color: #90bcd5;
     color: black;
     &:hover{
               transition: 0.8s;
-              background-color: #e9baba;
+             
+              background-color: #3c7596;
     }
 }
