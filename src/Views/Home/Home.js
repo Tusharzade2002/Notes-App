@@ -1,10 +1,26 @@
 import React from 'react'
 import './Home.css'
 import './../../index.css'
-import shield from './shield.png'
-import brain from './brain.png'
+import shield from './shield.png';
+import brain from './brain.png';
 import heart from './heart.png'
+import Featurecard from '../../Component/FeatureCard/Featurecard';
+
 function Home() {
+  const FEATURE =[
+    {
+      featureimg:shield,
+      featuretext:"Notes Will be Saved Securely in Your Browser's Local Storage"
+    },
+    {
+      featureimg:brain,
+      featuretext:"Use Your Brain For Thinking. Not for Remembaring"
+    },
+    {
+      featureimg:heart,
+      featuretext:"Loved By  100+ Users. Feedbacks Are Always Welcome!"
+    }
+  ]
   return (
     <div>
       <div className='text-centre App-name'> 📒{" "}Quick Notes</div>
@@ -12,23 +28,19 @@ function Home() {
         Your Packet Friendly Notes Taking App. <del>Never Forget Anything Again!</del> 
         <span className='highlight'> Remember Everything! 🧠</span>
       </p>
-
-      <div>
-        <h2 className='text-centre'>Why You Should Use Quick Notes</h2>
-        <div className='cards-container'>
-        <div className='feature-card '>
-          <img className='shield-img' src={shield} alt='shield image'/>
-         <p className='feature-text'>Notes Will be Saved Securely in Your Browser's Local Storage</p>
-        </div>
-        <div className='feature-card '>
-          <img className='shield-img' src={brain} alt='shield image'/>
-         <p className='feature-text'>Use Your Brain For Thinking. Not for Remembaring</p>
-        </div>
-        <div className='feature-card '>
-          <img className='shield-img' src={heart} alt='shield image'/>
-         <p className='feature-text'>Loved By <span className='highlight'> 100+ Users.</span> Feedbacks Are Always Welcome!</p>
-        </div>
-        </div>
+      <h2 className='text-centre'>Why You Should Use Quick Notes</h2>
+      <div className='cards-container'>
+      {
+        FEATURE.map((feature)=>{
+          const {featureimg ,featuretext} =feature;
+            return(
+             <Featurecard 
+                    featureimg={featureimg}
+                    featuretext={featuretext}
+              />
+            )
+        })
+      }
       </div>
 
       <div className='buttons-container'>
@@ -40,3 +52,5 @@ function Home() {
 }
 
 export default Home
+
+
