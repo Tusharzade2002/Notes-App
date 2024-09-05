@@ -1,3 +1,31 @@
 .Homeimg{
     height: 50px;
+    position: fixed;
+    left: 35px;
+    top: 35px;
+    cursor: pointer;
+    &:hover{
+        transition: 0.5s;
+        height: 55px;
+    }
+    
+}
+.App-name{
+font-size:40px;
+font-weight: 700;
+margin: 30px 0px;
+color: #5fa8d3;
+}
+@media screen and (max-width:500px){
+    .Homeimg{
+        height: 35px;
+       position: fixed;
+        left: 80vw;
+        top: 87vh;
+        cursor: pointer;
+        &:hover{
+            transition: 0.5s;
+            height: 40px;
+        } 
+    }
 }

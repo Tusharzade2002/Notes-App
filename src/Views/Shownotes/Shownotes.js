@@ -1,11 +1,13 @@
 import React from 'react'
 import './Shownotes.css'
-import Home from './../../Assest/home.png'
+
+import Homebutton from '../../Component/Homebutton/Homebutton'
 function Shownotes() {
   return (
     <div>
       
     <h1 className='text-centre primary-color'>✍️Addnotes</h1>
+    <Homebutton />
     </div>
   )
 }
