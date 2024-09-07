@@ -1,21 +1,47 @@
 .App-name{
     font-size:40px;
     font-weight: 700;
-    margin: 30px 0px;
+    margin: 50px 0px;
     color: #5fa8d3;
 }
 .user-input{
-    width: 300px;
+    width: 450px;
     height: 30px;
+    border-radius: 20px;
+    border: 1px solid rgb(101, 157, 210);
+    display: block;
+    padding: 7px 25px;
+    display: block;
+    margin: 10px auto;
+    font-weight: 400;
+}
+.inputs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.emoji-picker{
+    position: fixed;
+    top: -250px;
+    left: 35%;
+}
+.emoji{
+    width: 350px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    padding-top: 12px;
+    background-color: white;
+    font-size: 20px;
+}
+.user-input-category{
+    width: 500px;
+    height: 43px;
     border-radius: 20px;
     border: 1px solid rgb(101, 157, 210);
     display: block;
     padding: 7px 15px;
     display: block;
     margin: 10px auto;
-}
-.inputs-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }

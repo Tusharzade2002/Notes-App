@@ -30,20 +30,22 @@ function Addnotes() {
        className='user-input'
       />
    <select value={category} 
-   className='user-input'
+   className='user-input user-input-category'
    onChange={(e)=>{setCategory(e.target.value)}}>
     <option value="working">Working</option>
    <option value="personal">Personal</option>
    <option value="shopping">Shopping</option>
    <option value="learning">Learning</option>
    </select>
-{
-  emoji
-}
-    <button type='button' className='user-input' onClick={()=>setEmojiDialog(true)}>
-    Emoji
-   </button>
-      <EmojiPicker open={EmojiDialog} 
+
+  <div  className='user-input emoji' onClick={()=>setEmojiDialog(true)}>
+     {emoji ? emoji : "Select Emoji"}
+  </div>
+  
+   
+
+      <EmojiPicker className='emoji-picker'
+            open={EmojiDialog} 
             searchDisabled={true} 
             height="300px" 
             width="400px" 
