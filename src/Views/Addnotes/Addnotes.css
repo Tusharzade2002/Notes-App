@@ -1,6 +1,7 @@
 .App-name{
     font-size:40px;
     font-weight: 700;
+    
     margin: 50px 0px;
     color: #5fa8d3;
 }
@@ -12,13 +13,14 @@
     display: block;
     padding: 7px 25px;
     display: block;
-    margin: 10px auto;
+    margin: 30px auto;
+    font-size: 20px;
     font-weight: 400;
 }
 .inputs-container{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
 }
 .emoji-picker{
     position: fixed;
@@ -34,6 +36,8 @@
     padding-top: 12px;
     background-color: white;
     font-size: 20px;
+    display: block;
+    margin: 30px auto;
 }
 .user-input-category{
     width: 500px;
@@ -44,4 +48,9 @@
     padding: 7px 15px;
     display: block;
     margin: 10px auto;
+}
+.add-notes-btn{
+    display: block;
+    margin: 10px auto;
+    color: white;
 }

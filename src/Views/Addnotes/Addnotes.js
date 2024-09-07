@@ -41,10 +41,7 @@ function Addnotes() {
   <div  className='user-input emoji' onClick={()=>setEmojiDialog(true)}>
      {emoji ? emoji : "Select Emoji"}
   </div>
-  
-   
-
-      <EmojiPicker className='emoji-picker'
+   <EmojiPicker className='emoji-picker'
             open={EmojiDialog} 
             searchDisabled={true} 
             height="300px" 
@@ -55,6 +52,10 @@ function Addnotes() {
             setEmojiDialog(false)
             }}
       />  
+
+      <button type='button' className='btn add-notes-btn secondary-btn'>
+              +{" "} Add Notes
+      </button>
     </div>
     </div>
   )
