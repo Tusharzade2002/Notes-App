@@ -10,4 +10,12 @@
     border-radius: 20px;
     border: 1px solid rgb(101, 157, 210);
     display: block;
+    padding: 7px 15px;
+    display: block;
+    margin: 10px auto;
+}
+.inputs-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

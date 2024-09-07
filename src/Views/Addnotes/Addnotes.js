@@ -13,6 +13,7 @@ function Addnotes() {
     <div>
       <h2 className='text-centre primary-color App-name'>✍️Addnotes</h2>
       <Homebutton/> 
+      <div className='inputs-container'>
       <input type='text' 
       placeholder='Title'
       value={title}
@@ -29,17 +30,17 @@ function Addnotes() {
        className='user-input'
       />
    <select value={category} 
-   placeholder="category"
-   onClick={(e)=>{setCategory(e.target.value)}}>
+   className='user-input'
+   onChange={(e)=>{setCategory(e.target.value)}}>
+    <option value="working">Working</option>
    <option value="personal">Personal</option>
-   <option value="working">Working</option>
    <option value="shopping">Shopping</option>
    <option value="learning">Learning</option>
    </select>
 {
   emoji
 }
-    <button type='button' onClick={()=>setEmojiDialog(true)}>
+    <button type='button' className='user-input' onClick={()=>setEmojiDialog(true)}>
     Emoji
    </button>
       <EmojiPicker open={EmojiDialog} 
@@ -52,6 +53,7 @@ function Addnotes() {
             setEmojiDialog(false)
             }}
       />  
+    </div>
     </div>
   )
 }
