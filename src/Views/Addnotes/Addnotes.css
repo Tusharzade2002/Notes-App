@@ -17,11 +17,7 @@
     font-size: 20px;
     font-weight: 400;
 }
-.inputs-container{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-}
+
 .emoji-picker{
     position: fixed;
     top: -250px;
@@ -29,11 +25,11 @@
 }
 .emoji{
     width: 350px;
-    height: 30px;
+    height: 20px;
     text-align: center;
     display: inline-block;
     cursor: pointer;
-    padding-top: 12px;
+    padding-top: 6px;
     background-color: white;
     font-size: 20px;
     display: block;
@@ -53,4 +49,21 @@
     display: block;
     margin: 10px auto;
     color: white;
+}
+@media screen and (max-width:500px){
+    .user-input{
+        width: 290px;
+        height: 20px;
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+    .emoji{
+        padding-top: 3.5px;
+        height: 20px;
+        font-size: 18px;
+    }
+    .user-input-category{
+        width: 350px;
+        height: 40px;
+    }
 }

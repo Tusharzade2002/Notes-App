@@ -23,7 +23,7 @@ function Addnotes() {
       />
  
       <input type='text' 
-      placeholder='description'
+      placeholder='Description'
       value={description}
       onChange={(e)=>
        setDescription(e.target.value)}
@@ -53,7 +53,14 @@ function Addnotes() {
             }}
       />  
 
-      <button type='button' className='btn add-notes-btn secondary-btn'>
+      <button type='button' className='btn add-notes-btn secondary-btn'
+        onClick={()=>{
+          console.log("title:" ,title);
+          console.log("Description" ,description);
+          console.log("category" ,category);
+          console.log("Emoji" ,emoji); 
+        }}
+      >
               +{" "} Add Notes
       </button>
     </div>
