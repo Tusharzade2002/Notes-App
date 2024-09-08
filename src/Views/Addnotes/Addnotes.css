@@ -20,8 +20,8 @@
 
 .emoji-picker{
     position: fixed;
-    top: -250px;
-    left: 35%;
+    top: -300px;
+    left: 25%;
 }
 .emoji{
     width: 350px;
@@ -29,7 +29,8 @@
     text-align: center;
     display: inline-block;
     cursor: pointer;
-    padding-top: 6px;
+    padding-top: 4px;
+    padding-bottom: 8px;
     background-color: white;
     font-size: 20px;
     display: block;
@@ -64,6 +65,23 @@
     }
     .user-input-category{
         width: 350px;
-        height: 40px;
+        height: 30px;
+        padding: 3px 20px;
+    }
+    .emoji-picker{
+        position: fixed;
+        top: -270px;
+        left:12%;
+        width: 85%!important ;
+    }
+    .inputs-container{
+           margin: 10px;
     }
 }
+/* @media screen and (max-width:750px) {
+    .emoji-picker{
+        position: fixed;
+        top: -300px;
+        left:20%;
+    }
+} */
