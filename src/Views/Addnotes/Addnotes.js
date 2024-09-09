@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Addnotes.css'
 import Homebutton from '../../Component/Homebutton/Homebutton'
 import EmojiPicker from 'emoji-picker-react';
+import toast from 'react-hot-toast';
 
 function Addnotes() {
   const [title , setTitle] =useState("");
@@ -9,6 +10,29 @@ function Addnotes() {
   const [category,setCategory] =useState("")
   const [emoji , setEmoji] =useState("")
   const [EmojiDialog ,setEmojiDialog]=useState(false)
+
+  const Addnotes=()=>{
+    const notes  = JSON.parse(localStorage.getItem('notes')) || []
+
+    const notesobject ={
+      title,
+      description,
+      category,
+      emoji,
+    }
+
+    notes.push(notesobject);
+
+    localStorage.setItem("notes" ,  JSON.stringify(notes))
+
+    toast.success("Notes Added Succesfuly")
+    setTitle("")
+    setDescription("")
+    setCategory("")
+    setEmoji("")
+    
+    
+  }
   return (
     <div>
       <h2 className='text-centre primary-color App-name'>✍️Addnotes</h2>
@@ -32,6 +56,7 @@ function Addnotes() {
    <select value={category} 
    className='user-input user-input-category'
    onChange={(e)=>{setCategory(e.target.value)}}>
+     <option value="Select Category">Select Category</option>
     <option value="personal">Personal</option>
     <option value="working">Working</option>
    <option value="health">Health</option>
@@ -42,7 +67,16 @@ function Addnotes() {
   <div  className='user-input emoji' onClick={()=>setEmojiDialog(true)}>
      {emoji ? emoji : "Select Emoji"}
   </div>
-   <EmojiPicker className='emoji-picker'
+
+
+      <button type='button' className='btn add-notes-btn secondary-btn'
+        onClick={()=>{
+        Addnotes()
+        }}
+      >
+              +{" "} Add Notes
+      </button>
+      <EmojiPicker className='emoji-picker'
             open={EmojiDialog}  
             height="360px" 
             width="50%" 
@@ -52,17 +86,6 @@ function Addnotes() {
             setEmojiDialog(false)
             }}
       />  
-
-      <button type='button' className='btn add-notes-btn secondary-btn'
-        onClick={()=>{
-          console.log("title:" ,title);
-          console.log("Description" ,description);
-          console.log("category" ,category);
-          console.log("Emoji" ,emoji); 
-        }}
-      >
-              +{" "} Add Notes
-      </button>
     </div>
     </div>
   )
