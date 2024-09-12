@@ -29,9 +29,7 @@ function Addnotes() {
     setTitle("")
     setDescription("")
     setCategory("")
-    setEmoji("")
-    
-    
+    setEmoji("") 
   }
   return (
     <div>
