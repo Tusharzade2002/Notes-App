@@ -2,32 +2,31 @@ import React, { useEffect, useState } from 'react'
 import './Shownotes.css'
 
 import Homebutton from '../../Component/Homebutton/Homebutton'
+import Notecard from '../../Component/Notecard/Notecard';
 function Shownotes() {
-  const [notes ,setnotes] =useState([])
-  useEffect(()=>{
-    const savednotes=JSON.parse(localStorage.getItem("notes")) || []
+  const [notes,setnotes]=useState([]);
 
-    setnotes(savednotes);
-  },[])
+  useEffect(()=>{
+         const savenotes =JSON.parse(localStorage.getItem('notes')) || []
+         setnotes(savenotes);
+  },[]);
+  
   return (
     <div>
-      
     <h1 className='text-centre primary-color'>✍️Addnotes</h1>
-    <Homebutton />
+   
+     {
+      notes.map((note)=>{
+       const {title,description,category,emoji}=note
+             return(
+               <Notecard />
+             )
+              
+      })
+     }
+                 {/* {notes.map((note) => <div>{note.title}</div>)} */}
 
-  {
-    notes.map((note)=>{
-      const {title,description}=note
-     return(
-      <div>
-           {
-            title
-           }
-      </div>
-     )
-    })
-  }
-
+                  <Homebutton />
     </div>
   )
 }
