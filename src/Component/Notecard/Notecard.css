@@ -1,0 +1,12 @@
+.main-container{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 20px 20px;
+    border-radius: 5px;
+    padding: 3px 30px;
+}
+.shownote-emoji{
+    font-size: 40px;
+    margin-right: 50px;
+}

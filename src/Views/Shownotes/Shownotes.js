@@ -9,6 +9,8 @@ function Shownotes() {
   useEffect(()=>{
          const savenotes =JSON.parse(localStorage.getItem('notes')) || []
          setnotes(savenotes);
+         console.log(savenotes);
+         
   },[]);
   
   return (
@@ -17,10 +19,15 @@ function Shownotes() {
    
      {
       notes.map((note)=>{
-       const {title,description,category,emoji}=note
+          const {title,description,category,emoji}=note;
              return(
-               <Notecard />
+              
+              <Notecard title={title} description={description} category={category} emoji={emoji}/>
+           
+           
              )
+              
+            
               
       })
      }
