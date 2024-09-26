@@ -15,22 +15,19 @@ function Shownotes() {
   
   return (
     <div>
-    <h1 className='text-centre primary-color'>✍️Addnotes</h1>
-   
+    <h1 className='text-centre primary-color'>Show Notes</h1>
+   <div className='shownote-main-container'>
      {
-      notes.map((note)=>{
+       
+          notes.map((note,index)=>{
           const {title,description,category,emoji}=note;
              return(
               
-              <Notecard title={title} description={description} category={category} emoji={emoji}/>
-           
-           
-             )
-              
-            
-              
-      })
+              <Notecard index={index}
+              title={title} description={description} category={category} emoji={emoji}/>
+             )})
      }
+     </div>
                  {/* {notes.map((note) => <div>{note.title}</div>)} */}
 
                   <Homebutton />

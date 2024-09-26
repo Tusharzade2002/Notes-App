@@ -2,6 +2,7 @@ import React from 'react'
 import './Notecard.css'
 import deleteicon from './delete.png';
 import { Simulate } from 'react-dom/test-utils';
+import { json } from 'react-router-dom';
 function Notescategory({category}){
      const CATEGORY_EMOJIS ={
         "shopping":"🛒",
@@ -19,8 +20,14 @@ function Notescategory({category}){
      );
 }
 
+ function deleteNote(index){
+       const saveNotes=JSON.parse(localStorage.getItem('notes')) || []
+       saveNotes.splice(index,1);
+       localStorage.setItem('notes',JSON.stringify(saveNotes))
+       window.location.reload();
+}
 
-function Notecard({title,description,category,emoji}) {
+function Notecard({index,title,description,category,emoji}) {
   return (
     <div className='main-container'>
     
@@ -35,7 +42,9 @@ function Notecard({title,description,category,emoji}) {
              <span >
              <Notescategory category={category} />
              </span>
-             <img className='notecard-deletebutton' src={deleteicon} />
+             <img className='notecard-deletebutton' onClick={()=>{
+                deleteNote(index)
+             }} src={deleteicon} />
            </div>
     </div>
   )

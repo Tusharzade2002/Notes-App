@@ -1,0 +1,10 @@
+.shownote-main-container{
+    height: 80vh;
+    overflow-y:scroll;
+}
+@media screen and (max-width:500px) {
+    .shownote-main-container{
+        height: 70vh;
+        overflow-y:scroll;
+    } 
+}
